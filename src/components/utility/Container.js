@@ -6,7 +6,7 @@ import AnswerArea from './AnswerArea'
 import {connect} from 'react-redux'
 import bgimage from '../../assets/bg.jpg'
 import {getInitData} from '../../store/action'
-
+import {SERVER_PORT} from "../../config"
 const Container = ({getInitData}) => {
 	getInitData()
 
@@ -14,7 +14,7 @@ const Container = ({getInitData}) => {
 		<FullContainer>
 			<ContentContainer className="container" >
 				<AdminButtonWrapper>
-				<a href="http://localhost:8000/admin/">
+				<a href={`${SERVER_PORT}/admin/`}>
 				<AdminButton className="btn btn-primary">To Admin</AdminButton>
 				</a>
 				</AdminButtonWrapper>
